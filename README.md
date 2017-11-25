@@ -13,6 +13,23 @@ convert the officiall dhall library to a minified Javascript library.
 For now this is to be seen as proof of concept and by no means as a
 production-ready (much less supported) project.
 
+## Building
+
+*Attention:* the nix `ghcjsHEAD` release is used on a quite recent master.
+It might take a while to build the necessary compiler and libraries.
+
+```
+For the unminified output:
+$ nix-build -A orig  release.nix
+
+For the (experimental) minified version:
+$ nix-build -A small  release.nix
+
+To run:
+$ node ./release
+```
+
+
 ## Speed concerns
 
 Care needs to be taken that the resulting code loads and executes with an
