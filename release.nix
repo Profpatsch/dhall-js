@@ -1,5 +1,10 @@
-
-(import <nixpkgs> {
+let nixpkgsSrc = (import <nixpkgs> {}).fetchFromGitHub {
+      owner = "Profpatsch";
+      repo = "nixpkgs";
+      rev = "9ea1db72d66cfa0f617c01b69e9c8f732b55dd6f";
+      sha256 = "0lxa19gnsinip4ky9b647bj8mns5ngqzcxw63ff2qyn0x65qqv5q";
+    };
+in (import nixpkgsSrc {
   overlays = [(self: super:
     let
       functionize = name: js: super.runCommand name {} ''
