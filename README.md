@@ -1,3 +1,11 @@
+```
+$ nodejs ./hello-dhall.js
+Object (fromList [("bar",String "Hello DhallJS!"),("foo",Number 23.0)])
+
+$ du -ha ./hello-dhall.js
+624K	hello-dhall.js
+```
+
 # Quest: bringing dhall to Javascript
 
 see: https://github.com/dhall-lang/dhall-lang/issues/58
